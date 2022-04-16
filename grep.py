@@ -5,7 +5,15 @@ import sys
 
 def countpatterninfile():
     regular_expression = input("Enter a regular expression: ")
-
+    countLines = 0
+    regular_expression = input("Enter a regular expression: ")
+    file_name = "mbox-long.txt"
+    file_handle = open (file_name)
+    for line in file_handle:
+        if re.search(regular_expression, line):
+            countLines = countLines + 1
+    print ("There were" , countLines, "matches from the file.")
+    
 if __name__ == '__main__':
     # this is called a main method
     # This is another way of telling python THIS IS WHERE YOU SHOULD START RUNNING
