@@ -11,7 +11,7 @@ def countpatterninfile():
     for line in file_handle:
         if re.search(regular_expression, line):
             countLines = countLines + 1
-    print ("There were" , countLines, "matches from the file.")
+    print ("mbox.txt had", countLines, "lines that matched", regular_expression)
 
 if __name__ == '__main__':
     # this is called a main method
